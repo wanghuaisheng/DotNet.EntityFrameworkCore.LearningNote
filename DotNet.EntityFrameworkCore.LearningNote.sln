@@ -7,6 +7,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EFGetStarted.ConsoleApp", "
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EFGetStarted.ConsoleApp.ExistingDb", "EFGetStarted.ConsoleApp.ExistingDb\EFGetStarted.ConsoleApp.ExistingDb.xproj", "{C1DECB4B-1EE0-4EB8-BD97-96E55C1F865D}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EFGetStarted.ConsoleApp.SQLite", "EFGetStarted.ConsoleApp.SQLite\EFGetStarted.ConsoleApp.SQLite.xproj", "{1409217F-5152-473E-A6BE-1AE67199C440}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C1DECB4B-1EE0-4EB8-BD97-96E55C1F865D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1DECB4B-1EE0-4EB8-BD97-96E55C1F865D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1DECB4B-1EE0-4EB8-BD97-96E55C1F865D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1409217F-5152-473E-A6BE-1AE67199C440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1409217F-5152-473E-A6BE-1AE67199C440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1409217F-5152-473E-A6BE-1AE67199C440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1409217F-5152-473E-A6BE-1AE67199C440}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
