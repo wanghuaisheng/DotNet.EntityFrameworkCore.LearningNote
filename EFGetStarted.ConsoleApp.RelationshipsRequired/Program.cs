@@ -23,7 +23,10 @@ namespace EFGetStarted.ConsoleApp.RelationshipsRequired
             get;
             set;
         }
-        
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=DESKTOP-N3GTH4E\\SQLEXPRESS;Database=EFGetStarted.ConsoleApp.RelationshipsRequired;uid=sa;pwd=sasa;");
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Post>()
