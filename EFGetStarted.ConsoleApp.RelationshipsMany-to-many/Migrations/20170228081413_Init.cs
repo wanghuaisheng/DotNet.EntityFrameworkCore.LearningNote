@@ -38,12 +38,12 @@ namespace EFGetStarted.ConsoleApp.RelationshipsMany_to_many.Migrations
                 name: "PostTag",
                 columns: table => new
                 {
-                    TagId = table.Column<string>(nullable: false),
-                    PostId = table.Column<int>(nullable: false)
+                    PostId = table.Column<int>(nullable: false),
+                    TagId = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PostTag", x => new { x.TagId, x.PostId });
+                    table.PrimaryKey("PK_PostTag", x => new { x.PostId, x.TagId });
                     table.ForeignKey(
                         name: "FK_PostTag_Posts_PostId",
                         column: x => x.PostId,
@@ -59,9 +59,9 @@ namespace EFGetStarted.ConsoleApp.RelationshipsMany_to_many.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_PostTag_PostId",
+                name: "IX_PostTag_TagId",
                 table: "PostTag",
-                column: "PostId");
+                column: "TagId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

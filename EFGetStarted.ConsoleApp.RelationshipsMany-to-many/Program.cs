@@ -32,19 +32,30 @@ namespace EFGetStarted.ConsoleApp.RelationshipsMany_to_many
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PostTag>().HasKey(t => new
+            modelBuilder.Entity<PostTag>()
+            .HasKey(t => new
             {
-                t.TagId,
-                t.PostId
+                t.PostId, t.TagId
             });
             modelBuilder.Entity<PostTag>()
-            .HasOne(c => c.Post)
-            .WithMany(c => c.PostTags)
-            .HasForeignKey(c => c.PostId);
+            .HasOne(pt => pt.Post)
+            .WithMany(p => p.PostTags)
+            .HasForeignKey(pt => pt.PostId);
             modelBuilder.Entity<PostTag>()
-            .HasOne(c => c.Tag)
-            .WithMany(c => c.PostTags)
-            .HasForeignKey(c => c.TagId);
+            .HasOne(pt => pt.Tag)
+            .WithMany(t => t.PostTags)
+            .HasForeignKey(pt => pt.TagId);
+            //modelBuilder.Entity<Post>()
+            //.HasMany(c => c.PostTags);
+            //modelBuilder.Entity<Tag>()
+            //.HasMany(c => c.PostTags);
+            //modelBuilder.Entity<PostTag>().HasKey(c => new
+            //{
+            //    c.TagId,
+            //    c.PostId
+            //});
+            //modelBuilder.Entity<PostTag>().HasOne(c => c.Post);
+            //modelBuilder.Entity<PostTag>().HasOne(c => c.Tag);
         }
     }
     
