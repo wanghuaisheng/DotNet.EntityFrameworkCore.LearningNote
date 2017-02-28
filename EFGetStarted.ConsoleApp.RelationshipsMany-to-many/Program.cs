@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace EFGetStarted.ConsoleApp.RelationshipsMany_to_many
 {
+    //Add-Migration MyFirstMigration
+    //Update-Database
     public class Program
     {
         //Many-to-many relationships without an entity class to represent the join table are not yet supported. However, you can represent a many-to-many relationship by including an entity class for the join table and mapping two separate one-to-many relationships.
@@ -30,20 +32,19 @@ namespace EFGetStarted.ConsoleApp.RelationshipsMany_to_many
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PostTag>()
-            .HasKey(t => new
+            modelBuilder.Entity<PostTag>().HasKey(t => new
             {
-                t.PostId,
-                t.TagId
+                t.TagId,
+                t.PostId
             });
             modelBuilder.Entity<PostTag>()
-            .HasOne(pt => pt.Post)
-            .WithMany(p => p.PostTags)
-            .HasForeignKey(pt => pt.PostId);
+            .HasOne(c => c.Post)
+            .WithMany(c => c.PostTags)
+            .HasForeignKey(c => c.PostId);
             modelBuilder.Entity<PostTag>()
-            .HasOne(pt => pt.Tag)
-            .WithMany(t => t.PostTags)
-            .HasForeignKey(pt => pt.TagId);
+            .HasOne(c => c.Tag)
+            .WithMany(c => c.PostTags)
+            .HasForeignKey(c => c.TagId);
         }
     }
     

@@ -8,8 +8,8 @@ using EFGetStarted.ConsoleApp.RelationshipsMany_to_many;
 namespace EFGetStarted.ConsoleApp.RelationshipsMany_to_many.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20170228071351_MyFirstMigration")]
-    partial class MyFirstMigration
+    [Migration("20170228074858_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,13 +33,13 @@ namespace EFGetStarted.ConsoleApp.RelationshipsMany_to_many.Migrations
 
             modelBuilder.Entity("EFGetStarted.ConsoleApp.RelationshipsMany_to_many.PostTag", b =>
                 {
-                    b.Property<int>("PostId");
-
                     b.Property<string>("TagId");
 
-                    b.HasKey("PostId", "TagId");
+                    b.Property<int>("PostId");
 
-                    b.HasIndex("TagId");
+                    b.HasKey("TagId", "PostId");
+
+                    b.HasIndex("PostId");
 
                     b.ToTable("PostTag");
                 });

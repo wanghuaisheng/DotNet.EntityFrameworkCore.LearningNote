@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace EFGetStarted.ConsoleApp.RelationshipsMany_to_many.Migrations
 {
-    public partial class MyFirstMigration : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -38,12 +38,12 @@ namespace EFGetStarted.ConsoleApp.RelationshipsMany_to_many.Migrations
                 name: "PostTag",
                 columns: table => new
                 {
-                    PostId = table.Column<int>(nullable: false),
-                    TagId = table.Column<string>(nullable: false)
+                    TagId = table.Column<string>(nullable: false),
+                    PostId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PostTag", x => new { x.PostId, x.TagId });
+                    table.PrimaryKey("PK_PostTag", x => new { x.TagId, x.PostId });
                     table.ForeignKey(
                         name: "FK_PostTag_Posts_PostId",
                         column: x => x.PostId,
@@ -59,9 +59,9 @@ namespace EFGetStarted.ConsoleApp.RelationshipsMany_to_many.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_PostTag_TagId",
+                name: "IX_PostTag_PostId",
                 table: "PostTag",
-                column: "TagId");
+                column: "PostId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

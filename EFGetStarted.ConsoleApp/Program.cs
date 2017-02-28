@@ -6,7 +6,7 @@ namespace EFGetStarted.ConsoleApp
 {
     public class Program
     {
-        //Add-Migration MyFirstMigration
+        //Add-Migration MyFirstMigration/Remove-Migration
         //Update-Database
         public static void Main(string[] args)
         {

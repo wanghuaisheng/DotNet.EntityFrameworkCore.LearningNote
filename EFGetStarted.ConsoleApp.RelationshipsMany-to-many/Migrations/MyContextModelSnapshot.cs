@@ -32,13 +32,13 @@ namespace EFGetStarted.ConsoleApp.RelationshipsMany_to_many.Migrations
 
             modelBuilder.Entity("EFGetStarted.ConsoleApp.RelationshipsMany_to_many.PostTag", b =>
                 {
-                    b.Property<int>("PostId");
-
                     b.Property<string>("TagId");
 
-                    b.HasKey("PostId", "TagId");
+                    b.Property<int>("PostId");
 
-                    b.HasIndex("TagId");
+                    b.HasKey("TagId", "PostId");
+
+                    b.HasIndex("PostId");
 
                     b.ToTable("PostTag");
                 });
