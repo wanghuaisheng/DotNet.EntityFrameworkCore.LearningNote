@@ -1,20 +1,28 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
 
 namespace EFGetStarted.ConsoleApp.SQLite
 {
     public class Program
     {
-        //1. dotnet ef migrations add MyFirstMigration
+        //Add-Migration MyFirstMigration
+        //Update-Database
         public static void Main(string[] args)
         {
-        }
-    }
-    
-    public class BloggingContext : DbContext
-    {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Filename=./Blogging.db");
+            using(var db = new BloggingContext())
+            {
+                db.Blogs.Add(new Blog { Url = "http://blogs.msdn.com/adonet" });
+                var count = db.SaveChanges();
+                Console.WriteLine("{0} records saved to database", count);
+                Console.WriteLine();
+                Console.WriteLine("All blogs in database:");
+                
+                foreach(var blog in db.Blogs)
+                {
+                    Console.WriteLine(" - {0}", blog.Url);
+                }
+            }
+            
+            Console.ReadLine();
         }
     }
 }
