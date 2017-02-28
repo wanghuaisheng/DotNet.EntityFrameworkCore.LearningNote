@@ -8,7 +8,7 @@ using EFGetStarted.ConsoleApp.RelationshipsOne_to_one;
 namespace EFGetStarted.ConsoleApp.RelationshipsOne_to_one.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20170228075559_Init")]
+    [Migration("20170228082012_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
