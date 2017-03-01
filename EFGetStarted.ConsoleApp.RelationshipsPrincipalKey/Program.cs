@@ -34,7 +34,8 @@ namespace EFGetStarted.ConsoleApp.RelationshipsPrincipalKey
             modelBuilder.Entity<Car>()
             .HasMany(c => c.SaleHistory)
             .WithOne(c => c.Car)
-            .HasPrincipalKey(c => c.CarId);
+            .HasForeignKey(c => c.CarLicensePlate)
+            .HasPrincipalKey(c => c.LicensePlate);
         }
     }
     
