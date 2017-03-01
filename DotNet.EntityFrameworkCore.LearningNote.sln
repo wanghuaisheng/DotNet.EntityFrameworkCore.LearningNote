@@ -19,6 +19,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EFGetStarted.ConsoleApp.Rel
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EFGetStarted.ConsoleApp.RelationshipsPrincipalKey", "EFGetStarted.ConsoleApp.RelationshipsPrincipalKey\EFGetStarted.ConsoleApp.RelationshipsPrincipalKey.xproj", "{5C1DE69F-F9F7-41C8-99EF-733410E11FF4}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EFGetStarted.ConsoleApp.Indexes", "EFGetStarted.ConsoleApp.Indexes\EFGetStarted.ConsoleApp.Indexes.xproj", "{075074D3-0084-481C-A5D9-219A2FBD9118}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{5C1DE69F-F9F7-41C8-99EF-733410E11FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C1DE69F-F9F7-41C8-99EF-733410E11FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C1DE69F-F9F7-41C8-99EF-733410E11FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{075074D3-0084-481C-A5D9-219A2FBD9118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{075074D3-0084-481C-A5D9-219A2FBD9118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{075074D3-0084-481C-A5D9-219A2FBD9118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{075074D3-0084-481C-A5D9-219A2FBD9118}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
