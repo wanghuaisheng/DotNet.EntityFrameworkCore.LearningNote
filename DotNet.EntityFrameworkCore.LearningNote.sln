@@ -23,6 +23,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EFGetStarted.ConsoleApp.Ind
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EFGetStarted.ConsoleApp.AlternateKeys", "EFGetStarted.ConsoleApp.AlternateKeys\EFGetStarted.ConsoleApp.AlternateKeys.xproj", "{00804A0A-98EA-46AB-B867-D84644A93E63}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EFGetStarted.ConsoleApp.Inheritance", "EFGetStarted.ConsoleApp.Inheritance\EFGetStarted.ConsoleApp.Inheritance.xproj", "{F622388D-7353-4EA7-975A-FCDF4C72E9D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{00804A0A-98EA-46AB-B867-D84644A93E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00804A0A-98EA-46AB-B867-D84644A93E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00804A0A-98EA-46AB-B867-D84644A93E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F622388D-7353-4EA7-975A-FCDF4C72E9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F622388D-7353-4EA7-975A-FCDF4C72E9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F622388D-7353-4EA7-975A-FCDF4C72E9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F622388D-7353-4EA7-975A-FCDF4C72E9D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
